@@ -1,13 +1,3 @@
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 17px;
-  line-height: 1;
-  scroll-behavior: smooth;
-}
-
 html,
 body,
 div,
@@ -73,31 +63,7 @@ button {
           text-size-adjust: none;
 }
 
-h1 {
-  font-size: 4.5rem;
-}
-
-h2 {
-  font-size: 4rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
 a {
   color: inherit;
   text-decoration: none;
-}
-
-button {
-  cursor: pointer;
 }

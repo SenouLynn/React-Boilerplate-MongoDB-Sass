@@ -1,13 +1,26 @@
 @import '../Base/colors';
 @import '../Base/sizing';
-
+@import '../Base/flex';
 body{
     background-color: $main-bg-color;
 }
-@mixin full-page {
-    height: 100vh;
-    width: $max-page-width;
+@mixin full-page($height-vh) {
+    //Sizing//
+    height: $height-vh;
 
-    padding: $padding-6;
-    
+
+    //Spacing//
+    padding-left: $padding-3;
+    padding-right: $padding-3;
+    padding-top: $padding-3;
+    padding-bottom: $padding-3;
+
+    @include flex-builder(center-all);
+
+    //Background Color//
+
+}
+
+@mixin viewport{
+    max-width: $max-page-width;
 }

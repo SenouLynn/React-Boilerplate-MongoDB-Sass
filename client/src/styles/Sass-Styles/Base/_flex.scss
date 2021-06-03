@@ -1,6 +1,30 @@
-@mixin flex-builder($flex-direction, $justify-content, $align-items) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
+@mixin flex-place($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: wrap;
+}
+
+@mixin flex($flex-declare) {
+ 
+  @if $flex-declare == center-all {
+    @include flex-place(column, center, center);
+  } @else if $flex-declare == top-left {
+    @include flex-place(column, flex-start, flex-start);
+  } @else if $flex-declare == top-center {
+    @include flex-place(column, center, flex-start);
+  } @else if $flex-declare == top-right {
+    @include flex-place(column, flex-start, flex-end);
+  } @else if $flex-declare == middle-left {
+    @include flex-place(column, flex-start, center);
+  } @else if $flex-declare == middle-right {
+    @include flex-place(column, flex-end, center);
+  } @else if $flex-declare == bottom-left {
+    @include flex-place(column, flex-start, flex-end);
+  } @else if $flex-declare == bottom-center {
+    @include flex-place(column, center, flex-end);
+  } @else if $flex-declare == bottom-right {
+    @include flex-place(column, flex-end, flex-end);
+  }
 }

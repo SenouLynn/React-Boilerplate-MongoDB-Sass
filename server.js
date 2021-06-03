@@ -1,4 +1,5 @@
 //<--- Import Express Server Library --->//
+const express = require('express');
 const app = express();
 const path = require('path');
 
@@ -19,6 +20,7 @@ app.listen(port, () => {
 //<--- Local/Build Path Switch connecting to DB ---> //
 let staticDir;
 let herokuConnect; 
+
 
 if(process.env.MONGODB){
     staticDir = path.resolve('./client/build')
