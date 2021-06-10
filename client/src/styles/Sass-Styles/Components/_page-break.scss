@@ -1,0 +1,21 @@
+@import '../Base/colors';
+@import '../Base/sizing';
+@import '../Base/flex';
+
+@import "../Pages/page";
+
+.page-break{
+   
+    width: 100%;
+    @include full-page(32vh);
+
+    background-color: $silver-pink;
+
+
+    //Center Text//
+    @include flex-col(center-all);
+
+
+    position: absolute;
+    z-index: 11;
+}

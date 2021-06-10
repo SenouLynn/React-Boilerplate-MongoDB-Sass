@@ -1,0 +1,10 @@
+
+
+@mixin center-pic () {
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}

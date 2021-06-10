@@ -61,6 +61,9 @@ button {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
+  list-style: none;
+
+  box-sizing: border-box;
 }
 
 

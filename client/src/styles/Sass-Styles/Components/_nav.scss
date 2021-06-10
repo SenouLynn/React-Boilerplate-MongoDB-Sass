@@ -1,0 +1,62 @@
+@import "../Base/sizing";
+@import "../Base/padding";
+@import "../Base/flex";
+@import "../Base/colors";
+
+.nav-full{
+    //Sizing//
+    width: 100%;
+    height: 10vh;
+
+
+    //Color//
+    background-color: $secondary-color ;
+
+
+    //Position//
+    position: fixed;
+    z-index: 100;
+
+
+    @include flex-row(center-all);
+
+    .nav-viewport{
+        max-width: $max-page-width;
+        width: 100%;
+        height: 100%;
+       
+
+
+        @include flex-place(row, center, center);
+
+
+        .nav-logo > * {
+
+            @include flex-col(center-all);
+        
+            width: 10vh;
+
+        }
+
+        .nav-link-container {
+         
+            @include flex-row(middle-right);
+            height: 100%;
+            
+            .nav-link {
+
+                @include flex-row(center-all);
+
+                height: 100%;
+                padding-left: $padding-2;
+                padding-right: $padding-2;
+    
+            }
+
+            .nav-link:hover{
+                background-color: $ternary-color;
+            }
+        }
+
+    }
+}

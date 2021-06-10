@@ -6,25 +6,49 @@
   flex-wrap: wrap;
 }
 
-@mixin flex($flex-declare) {
+@mixin flex-row($flex-declare) {
  
   @if $flex-declare == center-all {
-    @include flex-place(column, center, center);
+    @include flex-place(row, center, center);
   } @else if $flex-declare == top-left {
-    @include flex-place(column, flex-start, flex-start);
+    @include flex-place(row, flex-start, flex-start);
   } @else if $flex-declare == top-center {
-    @include flex-place(column, center, flex-start);
+    @include flex-place(row, center, flex-start);
   } @else if $flex-declare == top-right {
-    @include flex-place(column, flex-start, flex-end);
+    @include flex-place(row, flex-start, flex-end);
   } @else if $flex-declare == middle-left {
-    @include flex-place(column, flex-start, center);
+    @include flex-place(row, flex-start, center);
   } @else if $flex-declare == middle-right {
-    @include flex-place(column, flex-end, center);
+    @include flex-place(row, flex-end, center);
   } @else if $flex-declare == bottom-left {
-    @include flex-place(column, flex-start, flex-end);
+    @include flex-place(row, flex-start, flex-end);
   } @else if $flex-declare == bottom-center {
-    @include flex-place(column, center, flex-end);
+    @include flex-place(row, center, flex-end);
   } @else if $flex-declare == bottom-right {
-    @include flex-place(column, flex-end, flex-end);
+    @include flex-place(row, flex-end, flex-end);
+  }
+}
+
+
+@mixin flex-col($flex-declare) {
+ 
+  @if $flex-declare == center-all {
+    @include flex-place(col, center, center);
+  } @else if $flex-declare == top-left {
+    @include flex-place(col, flex-start, flex-start);
+  } @else if $flex-declare == top-center {
+    @include flex-place(col, center, flex-start);
+  } @else if $flex-declare == top-right {
+    @include flex-place(col, flex-start, flex-end);
+  } @else if $flex-declare == middle-left {
+    @include flex-place(col, flex-start, center);
+  } @else if $flex-declare == middle-right {
+    @include flex-place(col, flex-end, center);
+  } @else if $flex-declare == bottom-left {
+    @include flex-place(col, flex-start, flex-end);
+  } @else if $flex-declare == bottom-center {
+    @include flex-place(col, center, flex-end);
+  } @else if $flex-declare == bottom-right {
+    @include flex-place(col, flex-end, flex-end);
   }
 }

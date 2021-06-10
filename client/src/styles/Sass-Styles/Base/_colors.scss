@@ -1,11 +1,22 @@
-$primary-color: "";
-$secondary-color: "";
-$ternary-color: "";
+//Color Pallete//
 
-$font-color: "";
+/* CSS HEX */
+$dim-gray: #65655eff;
+$violet-blue-crayola: #7d80daff;
+$blue-bell: #b0a3d4ff;
+$thistle: #cebacfff;
+$silver-pink: #c6afb1ff;
 
 
-$main-bg-color: "";
-$secondary-bg-color: "";
+
+$primary-color: $dim-gray;
+$secondary-color: $violet-blue-crayola;
+$ternary-color: $blue-bell;
+
+$font-color: $thistle;
+
+
+$main-bg-color: $blue-bell;
+$secondary-bg-color: $dim-gray;
 
 

@@ -1,0 +1,36 @@
+@import "../Pages/page";
+@import "../Images/img-placement";
+
+.landing-full {
+  @include full-page(100vh);
+}
+
+.landing-viewport {
+  @include viewport;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100%;
+
+  .landing-pic-container {
+    height: 100vh;
+    max-height: 650px;
+
+
+    
+
+    box-sizing: border-box;
+    .landing-pic {
+      @include center-pic;
+    }
+  }
+
+  .landing-title-container {
+    padding: $padding-6;
+    max-height: 100%;
+   
+    // position: relative;
+    // z-index: 10;
+  }
+}

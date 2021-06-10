@@ -4,3 +4,19 @@
 @import "./Sass-Styles/Base/margin";
 @import "./Sass-Styles/Base/padding";
 @import "./Sass-Styles/Base/colors";
+@import "./Sass-Styles/Base/font";
+@import "./Sass-Styles/Base/font-size";
+
+
+
+
+//Pages
+@import "./Sass-Styles/Pages/page";
+
+//Components 
+@import "./Sass-Styles/Components/nav";
+@import "./Sass-Styles/Components/landing-page";
+@import "./Sass-Styles/Components/page-break";
+
+//Decorations
+@import "./Sass-Styles/Decorations/text-decorations";

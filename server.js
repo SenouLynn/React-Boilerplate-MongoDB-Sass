@@ -19,41 +19,18 @@ app.listen(port, () => {
 
 //<--- Local/Build Path Switch connecting to DB ---> //
 let staticDir;
-let herokuConnect; 
+let productionState = true;
 
 
-if(process.env.MONGODB){
+if(!productionState){
     staticDir = path.resolve('./client/build')
-    herokuConnect = process.env.MONGODB
+
 } else {
     staticDir = path.resolve('./client/public')
-    herokuConnect =  "" // INSERT LOCAL MONGODB ADDRESS EX: "mongodb://localhost:27017/til"
-}
+
 //<--- Local/Build Server Switch --->//
 app.use(express.static(staticDir));
-
-//<--- Import Mongoose Dependencies --->//
-const mongoose = require('mongoose')
-const ObjectId = require("mongodb").ObjectId;
-const dbConnect = mongoose.connection;
-
-mongoose.connect( herokuConnectVar, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  });
-
-// Schema Declaration //
-const postSchema = new mongoose.Schema({
-    // author: String,
-    // postTitle: String,
-    // date: Date,
-    // time: String,
-    // postContent: String,
-    // keyWords: Array,
-  });
-  
-
+}
 
 
 
