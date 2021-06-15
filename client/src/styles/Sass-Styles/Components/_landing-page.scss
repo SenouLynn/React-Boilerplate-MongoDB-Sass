@@ -14,23 +14,30 @@
   max-width: 100%;
 
   .landing-pic-container {
-    height: 100vh;
+
+
     max-height: 650px;
 
-
-    
-
-    box-sizing: border-box;
     .landing-pic {
       @include center-pic;
+      max-width: 100%;
+      
+  
+      position: fixed;
+    left: 0;
+      z-index: 9;
     }
   }
 
   .landing-title-container {
-    padding: $padding-6;
+    background-color: transparent;
+    padding-left: $padding-6;
     max-height: 100%;
-   
-    // position: relative;
-    // z-index: 10;
+    max-width: 30%;
+    flex-wrap: wrap;
+
+    position: absolute;
+    left: 0;
+    z-index: 10;
   }
 }

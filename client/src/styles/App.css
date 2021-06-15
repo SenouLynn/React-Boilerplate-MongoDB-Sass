@@ -73,9 +73,7 @@ a {
 
 /* CSS HEX */
 /* CSS HEX */
-*,
-*:before,
-*:after {
+* {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 17px;
   color: #cebacfff;
@@ -111,7 +109,7 @@ p {
 
 /* CSS HEX */
 body {
-  background-color: #b0a3d4ff;
+  background-color: #927D78ff;
 }
 
 /* CSS HEX */
@@ -224,7 +222,7 @@ body {
 
 /* CSS HEX */
 body {
-  background-color: #b0a3d4ff;
+  background-color: #927D78ff;
 }
 
 .landing-full {
@@ -262,10 +260,7 @@ body {
 }
 
 .landing-viewport .landing-pic-container {
-  height: 100vh;
   max-height: 650px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .landing-viewport .landing-pic-container .landing-pic {
@@ -273,24 +268,33 @@ body {
      object-fit: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 100%;
   width: 100%;
+  max-width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 9;
 }
 
 .landing-viewport .landing-title-container {
-  padding: 2rem;
+  background-color: transparent;
+  padding-left: 2rem;
   max-height: 100%;
+  max-width: 30%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  z-index: 10;
 }
 
 /* CSS HEX */
 /* CSS HEX */
 body {
-  background-color: #b0a3d4ff;
+  background-color: #927D78ff;
 }
 
 .page-break {
-  width: 100%;
   height: 32vh;
   max-height: 650px;
   display: -webkit-box;
@@ -309,18 +313,108 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #c6afb1ff;
+  position: relative;
+  z-index: 11;
+  padding: 6rem;
+}
+
+.page-break .page-break-viewport {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: col;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: col;
+          flex-direction: col;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background-color: black;
+}
+
+.page-break .page-break-viewport .page-break-viewport > div > a {
+  padding: 2rem;
+}
+
+/* CSS HEX */
+body {
+  background-color: #927D78ff;
+}
+
+.about-full {
+  height: 100%;
+  max-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: col;
+          flex-direction: col;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
   z-index: 11;
+  background-color: #927D78ff;
+}
+
+.about-full .about-viewport {
+  max-width: 1400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 100%;
+  padding: 6rem;
+}
+
+.about-full .about-viewport .about-box-1 {
+  width: 70%;
+  padding-right: 4rem;
+}
+
+.about-full .about-viewport .about-box-1 .about-box-1 > h3 {
+  padding-bottom: 6rem;
+}
+
+.about-full .about-viewport .about-box-2 {
+  width: 30%;
+}
+
+.about-full .about-viewport .about-pic {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  height: 70vh;
 }
 
 /* CSS HEX */
 .title-highlight {
   text-shadow: #918585 5px 5px 10px;
+  color: #5E1715ff;
+}
+
+.title-highlight-2 {
+  text-shadow: #918585 5px 5px 10px;
+  color: #87B672ff;
 }

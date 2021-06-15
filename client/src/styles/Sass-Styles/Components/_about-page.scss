@@ -1,0 +1,50 @@
+
+@import "../Pages/page";
+@import "../Images/img-placement";
+@import "../Base/padding";
+
+
+.about-full{
+    @include full-page(100%);
+    position: absolute;
+    z-index: 11;
+
+    background-color: $main-bg-color;
+
+    .about-viewport{
+
+        @include viewport;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 100%;
+
+        padding: $padding-8;
+
+        .about-box-1{
+            width: 70%;
+            padding-right: $padding-7;
+
+            .about-box-1 > h3 {
+                padding-bottom: $padding-8;
+            }
+        
+        }
+
+        .about-box-2 {
+            width: 30%;
+
+        }
+
+
+
+     
+    
+        .about-pic{
+            @include center-pic;
+            height: 70vh;
+            // border: solid .25rem $highlight-color;
+        }
+    }
+}

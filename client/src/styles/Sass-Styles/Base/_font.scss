@@ -8,9 +8,7 @@ $title-font: "";
 $highlight-font: "";
 $bold-font:  "";
 
-*,
-*:before,
-*:after {
+* {
   font-family: $primary-font;
   font-size: 17px;
   color: $font-color;

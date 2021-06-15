@@ -4,4 +4,11 @@
 .title-highlight {
 
     text-shadow: rgb(145, 133, 133) 5px 5px 10px ;
+    color: $highlight-color
+}
+
+.title-highlight-2 {
+
+    text-shadow: rgb(145, 133, 133) 5px 5px 10px ;
+    color: $highlight-2-color;
 }
