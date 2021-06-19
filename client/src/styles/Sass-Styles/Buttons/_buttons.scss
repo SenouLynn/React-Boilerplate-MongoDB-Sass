@@ -1,4 +1,31 @@
+@import '../Base/colors';
+@import '../Base/padding';
+
+
+
 button {
     cursor: pointer ;
+    padding: $padding-2;
+
+   
+
+    border-radius: 5px;
+
+    box-shadow: 1px 1px;
   }
-  
+
+
+
+.button-1{
+  margin: $margin-2;
+  background-color: $font-color;
+  color:  $highlight-color;
+
+}
+
+.button-1:hover{
+  background-color: $highlight-color;
+  color: $font-color;
+
+  transition: color 1s ease-in, background-color 1s ease-in;
+}

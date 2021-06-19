@@ -13,6 +13,8 @@ import NavMobile from './components/NavMobile'
 import Landing from './components/Landing'
 import PageBreak from './components/PageBreak'
 import About from './components/About'
+import AboutMobile from './components/AboutMobile'
+import PageBreak2 from './components/PageBreak2'
 
 
 
@@ -21,10 +23,10 @@ function App() {
   //Conditionally Render Components Based on Screen Size//
 
   const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-device-width: 600px)'
+    query: '(min-device-width: 800px)'
   })
 
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 800px)' })
 
 
 
@@ -35,15 +37,20 @@ function App() {
 
       {isDesktopOrLaptop && <>
       <Nav />
+      <Landing />
+      <PageBreak />
+      <About />
+      <PageBreak2 />
       </>
       }
       {isTabletOrMobile && <> 
       <NavMobile />
-      </>}
-
       <Landing />
       <PageBreak />
-      <About />
+      <AboutMobile />
+      {/* <PageBreak /> */}
+      </>}
+
     </div>
   );
 }

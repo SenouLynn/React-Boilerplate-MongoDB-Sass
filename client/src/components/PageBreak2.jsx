@@ -7,10 +7,10 @@ export default function PageBreak() {
 
 
     return (
-        <div className="page-break">
+        <div className="page-break-2">
             <div className="page-break-viewport">
-             
-
+                {/* <p>"Ask not what your company can do for you, ask what you can do for your company." - JFK</p> */}
+            
                     <a href="https://www.linkedin.com/in/senou-lynn-44857a11a/" target="_blank">{iconLinkedIn}</a>
                     <a href="https://github.com/SenouLynn" target="_blank">{iconGithub}</a>
                     <a href="mailto:senou.lynn@gmail.com?subject=Greetings!" target="_blank">{iconEmail}</a>

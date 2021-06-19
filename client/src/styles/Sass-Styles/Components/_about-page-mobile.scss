@@ -2,10 +2,12 @@
 @import "../Pages/page";
 @import "../Images/img-placement";
 @import "../Base/padding";
+@import "../Base/margin";
 
 
-.about-full{
-    @include full-page(100vh);
+
+.about-mobile-full{
+    @include full-page(110vh);
 
 
     
@@ -15,39 +17,35 @@
 }
 
 
-.about-viewport{
+.about-mobile-viewport{
+    
     background-color: $main-bg-color;
     position: absolute;
     z-index: 11;
     @include viewport;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+
     max-width: 100%;
     height: 100%;
     
     padding: $padding-6;
     
-    @include flex-col(center-all);
-    .about-box-1{
-        width: 70%;
-     
-        padding-right: $padding-7;
+ 
+    .about-mobile-box-1{
+        width: 100%;
+    
 
          h3 {
             padding-bottom: $padding-4;
         }
 
 
-        .about-info-container{
+        .about-mobile-info-container{
             width: 100%;
 
             margin-top: $padding-6;
-            padding: $padding-6;
+            padding: $padding-2;
 
             border: 2px solid $highlight-color;
-            border-radius: 5px;
 
             display: flex;
             flex-direction: column;
@@ -56,7 +54,7 @@
             flex-wrap: wrap;
 
            
-                .about-info-sub-container{
+                .about-mobile-info-sub-container{
                     width: 100%;
                     display: flex;
                     flex-direction: row;
@@ -77,17 +75,22 @@
         }    
     }
 
-    .about-box-2 {
-        width: 30%;
+    .about-mobile-box-2 {
+        width: 100%;
         height: 100%;
         
         @include flex-row(center-all);
 
+        flex-wrap: nowrap ;
+        padding-bottom: $padding-4;
+
         
-            .about-pic{
+            .about-mobile-pic{
                 @include center-pic;
                 height: 30vw;
                 width: 30vw;
+
+                margin-left: $margin-2;
         
                 border-radius: 50%;
                 border: 2px solid $highlight-color;
