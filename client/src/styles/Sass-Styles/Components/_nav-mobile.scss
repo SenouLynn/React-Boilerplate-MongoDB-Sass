@@ -1,0 +1,118 @@
+@import "../Base/sizing";
+@import "../Base/padding";
+@import "../Base/flex";
+@import "../Base/colors";
+
+@import "../Base/media-querries";
+
+nav {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+    .burger-container{
+        padding: 1rem;
+        position: fixed;
+        z-index: 101;
+
+    }
+
+}
+
+
+
+.nav-mobile-full{
+    //Sizing//
+    width: 100%;
+    height: 100%;
+
+
+    //Color//
+    background-color: $secondary-color ;
+
+
+    //Position//
+    position: fixed;
+    z-index: 100;
+
+    @include flex-place(row, center, center);
+
+    .nav-mobile-viewport{
+        max-width: $max-page-width;
+        width: 100%;
+        height: 100%;
+       
+        .nav-mobile-link-container {
+            @include flex-place(row, space-between, center);
+            // height: 100%;
+            
+            
+            .nav-mobile-link {
+                width: 100%;
+                height: auto;
+                padding: 2rem 0 2rem 0;
+                @include flex-place(row, center, center);
+            }
+
+            .nav-mobile-link:hover{
+                background-color: $ternary-color;
+                transition: background-color 1s ease-in;
+            }
+
+        }
+        
+    }
+}
+
+
+
+//Slide Out from Lef
+
+    .navOpen {
+      animation-duration: 3s;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 1;
+      width: 100%;
+  
+      animation-name: slidein;
+  
+      @keyframes slidein {
+        from {
+          margin-right: 100%;
+          width: 0%;
+          opacity: 0;
+        }
+  
+        to {
+          margin-right: 0%;
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  
+    .navClosed {
+      animation-duration: 3s;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      width: 0%;
+  
+      animation-name: slideout;
+  
+      @keyframes slideout {
+        from {
+          margin-right: 0%;
+          width: 100%;
+          opacity: 1;
+        }
+  
+        to {
+          margin-right: 100%;
+          width: 0%;
+          opacity: 0;
+        }
+      }
+    }
+  
+  

@@ -18,17 +18,17 @@
     
     position: relative;
     z-index: 11;
-    padding: 6rem;
+    padding: 3rem;
     
-    .page-break-viewport{
+   
         @include flex-col(center-all);
         width: 100%;
-        background-color: black;
-
-        .page-break-viewport > div > a {
-            padding: 2rem;
-        }
+    
+    a {
+        padding: 2rem;
     }
+   
+
 
     
     

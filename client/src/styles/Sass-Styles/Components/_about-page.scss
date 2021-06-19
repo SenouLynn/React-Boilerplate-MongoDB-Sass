@@ -5,46 +5,92 @@
 
 
 .about-full{
-    @include full-page(100%);
+    @include full-page(111vh);
     position: absolute;
     z-index: 11;
 
     background-color: $main-bg-color;
 
-    .about-viewport{
+    max-height: fit-content;
 
-        @include viewport;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        max-width: 100%;
-
-        padding: $padding-8;
-
-        .about-box-1{
-            width: 70%;
-            padding-right: $padding-7;
-
-            .about-box-1 > h3 {
-                padding-bottom: $padding-8;
-            }
-        
-        }
-
-        .about-box-2 {
-            width: 30%;
-
-        }
+}
 
 
+.about-viewport{
+    @include viewport;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    height: 100%;
+
+    padding: $padding-6;
+
+    .about-box-1{
+        width: 70%;
      
-    
-        .about-pic{
-            @include center-pic;
-            height: 70vh;
-            // border: solid .25rem $highlight-color;
+        padding-right: $padding-7;
+
+         h3 {
+            padding-bottom: $padding-4;
         }
+
+
+        .about-info-container{
+            width: 100%;
+
+            margin-top: $padding-6;
+            padding: $padding-6;
+
+            border: 2px solid $highlight-color;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+           
+                .about-info-sub-container{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+
+                    div {
+                        width: 50%;
+                        margin: $padding-2;
+
+                        p{
+                            padding: $padding-2;
+                        }
+
+                    }
+                }
+            
+        }    
     }
+
+    .about-box-2 {
+        width: 30%;
+        height: 100%;
+        
+        @include flex-row(center-all);
+
+        
+            .about-pic{
+                @include center-pic;
+                height: 30vw;
+                width: 30vw;
+        
+                border-radius: 50%;
+                border: 2px solid $highlight-color;
+                // border: solid .25rem $highlight-color;
+            }
+    }
+
+
+
+ 
 }
