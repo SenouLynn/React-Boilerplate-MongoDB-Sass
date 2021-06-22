@@ -1,8 +1,6 @@
 //Tools//
 import { useMediaQuery } from 'react-responsive'
 
-
-
 //CSS
 import './styles/App.css';
 
@@ -15,6 +13,7 @@ import PageBreak from './components/PageBreak'
 import About from './components/About'
 import AboutMobile from './components/AboutMobile'
 import PageBreak2 from './components/PageBreak2'
+import Projects from './components/Projects'
 
 
 
@@ -30,8 +29,7 @@ function App() {
 
 
 
-
-
+console.log(isDesktopOrLaptop)
   return (
     <div className="App">
 
@@ -41,6 +39,7 @@ function App() {
       <PageBreak />
       <About />
       <PageBreak2 />
+      <Projects />
       </>
       }
       {isTabletOrMobile && <> 
@@ -48,7 +47,8 @@ function App() {
       <Landing />
       <PageBreak />
       <AboutMobile />
-      {/* <PageBreak /> */}
+      <PageBreak2 />
+      <Projects />
       </>}
 
     </div>

@@ -11,9 +11,9 @@ export default function PageBreak() {
             <div className="page-break-viewport">
              
 
-                    <a href="https://www.linkedin.com/in/senou-lynn-44857a11a/" target="_blank">{iconLinkedIn}</a>
-                    <a href="https://github.com/SenouLynn" target="_blank">{iconGithub}</a>
-                    <a href="mailto:senou.lynn@gmail.com?subject=Greetings!" target="_blank">{iconEmail}</a>
+                    <a href="https://www.linkedin.com/in/senou-lynn-44857a11a/" target="_blank" rel="noreferrer" >{iconLinkedIn}</a>
+                    <a href="https://github.com/SenouLynn" target="_blank" rel="noreferrer" >{iconGithub} </a>
+                    <a href="mailto:senou.lynn@gmail.com?subject=Greetings!" target="_blank" rel="noreferrer" >{iconEmail}</a>
 
                 
             </div>

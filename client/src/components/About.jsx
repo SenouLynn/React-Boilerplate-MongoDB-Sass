@@ -1,7 +1,6 @@
 import React from 'react'
 
 //Image Import//
-import AboutPic1 from '../img/Senou - Aboutpic.jpg'
 import AboutPic2 from '../img/Senou - Aboutpic2.jpg'
 
 import Resume from '../files/Resume - Senou Lynn.pdf'
@@ -43,7 +42,7 @@ export default function About() {
 
                             </div>
                                 <div>
-                                    <a href={Resume} download="Senou Lynn - Resume" target='_blank'>
+                                    <a href={Resume} download="Senou Lynn - Resume" target='_blank' rel="noreferrer" >
                                         <button className="button-1">Download my Resume!</button>
                                     </a>
                                 </div>

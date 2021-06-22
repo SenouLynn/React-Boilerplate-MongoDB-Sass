@@ -4,8 +4,8 @@ export default function Nav() {
     let navLinkArray = [
         "Home",
         "About",
-        "Skills",
         "Projects",
+        "Skills",
         "Resume",
 
     ]

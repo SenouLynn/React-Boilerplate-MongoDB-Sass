@@ -10,7 +10,7 @@ export default function landing() {
 
 
                 <div className="landing-pic-container">
-                    <img className="landing-pic" src={landingPic}></img>
+                    <img className="landing-pic" src={landingPic} alt="Senou Shocka-brawing"></img>
                 </div>
                 <div className="landing-title-container">
                     <h3>Senou</h3>

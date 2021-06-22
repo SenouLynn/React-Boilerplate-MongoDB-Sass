@@ -9,7 +9,7 @@ body{
 @mixin full-page($height-vh) {
     //Sizing//
     height: $height-vh;
-    max-height: $max-page-height;
+    max-height: fit-content;
 
     width: 100%;
     max-width: 100vw;
@@ -23,5 +23,7 @@ body{
 
 @mixin viewport{
     max-width: $max-page-width;
+    padding: $padding-6;
+    
 }
 

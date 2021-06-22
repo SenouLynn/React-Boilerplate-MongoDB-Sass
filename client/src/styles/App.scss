@@ -21,9 +21,16 @@
 @import "./Sass-Styles/Components/about-page";
 @import "./Sass-Styles/Components/about-page-mobile";
 @import "./Sass-Styles/Components/page-break-2";
+@import "./Sass-Styles/Components/projects";
 
 //Decorations
 @import "./Sass-Styles/Decorations/text-decorations";
 
 //Buttons
-@import "./Sass-Styles//Buttons/buttons"
+@import "./Sass-Styles//Buttons/buttons";
+
+.app{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
