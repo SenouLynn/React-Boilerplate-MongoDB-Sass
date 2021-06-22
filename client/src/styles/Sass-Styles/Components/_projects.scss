@@ -16,7 +16,7 @@
   width: 100%;
 
   @include viewport;
-  position: absolute;
+  position: relative;
   z-index: 14;
 }
 
@@ -35,7 +35,7 @@
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-auto-rows: 1fr;
   grid-gap: $padding-6;
-  padding: $padding-6;
+
 
   .grid-item {
     // background-color: black;
@@ -47,7 +47,7 @@
 
 
     img {
-      @include center-pic;
+      @include pic-center-top;
       max-width: 100%;
 
       padding: $padding-2;
@@ -64,11 +64,12 @@
 
     i:hover{
       font-size: 3em;
-      transition: font-size .2s ease-in;
+      transition: font-size .2s ease-in, color .2s ease-in;
+      color: $violet-blue-crayola;
     }
 
     i:not(:hover){
-      transition: font-size .5s ease-out;
+      transition: font-size .5s ease-out, color .2s ease-in;
     }
 
     

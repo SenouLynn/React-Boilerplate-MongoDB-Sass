@@ -71,6 +71,11 @@ a {
   text-decoration: none;
 }
 
+u {
+  text-decoration: none;
+  border-bottom: 2px solid rgba(227, 222, 229, 0.65);
+}
+
 /* CSS HEX */
 /* CSS HEX */
 * {
@@ -468,7 +473,7 @@ body {
 }
 
 .page-break {
-  height: 32vh;
+  height: 20vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -511,6 +516,17 @@ body {
 
 .page-break a .fab, .page-break a .fas {
   color: #87B672ff;
+}
+
+.page-break a .fab:hover, .page-break a .fas:hover {
+  color: #7d80daff;
+  -webkit-transition: color .5s ease-in;
+  transition: color .5s ease-in;
+}
+
+.page-break a .fab:not(:hover), .page-break a .fas:not(:hover) {
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
 
 /* CSS HEX */
@@ -674,7 +690,7 @@ body {
 }
 
 .about-mobile-full {
-  height: 110vh;
+  height: 95vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -831,7 +847,7 @@ body {
       flex-wrap: wrap;
   background-color: #c6afb1ff;
   position: relative;
-  z-index: 14;
+  z-index: 11;
   padding: 0.5rem;
   display: flex;
   flex-direction: col;
@@ -893,7 +909,7 @@ body {
   width: 100%;
   max-width: 1400px;
   padding: 2rem;
-  position: absolute;
+  position: relative;
   z-index: 14;
 }
 
@@ -913,7 +929,6 @@ body {
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-auto-rows: 1fr;
   grid-gap: 2rem;
-  padding: 2rem;
 }
 
 .projects-grid-container .grid-item {
@@ -925,9 +940,9 @@ body {
 }
 
 .projects-grid-container .grid-item img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-position: center center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: center top;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -945,13 +960,14 @@ body {
 
 .projects-grid-container .grid-item i:hover {
   font-size: 3em;
-  -webkit-transition: font-size .2s ease-in;
-  transition: font-size .2s ease-in;
+  -webkit-transition: font-size .2s ease-in, color .2s ease-in;
+  transition: font-size .2s ease-in, color .2s ease-in;
+  color: #7d80daff;
 }
 
 .projects-grid-container .grid-item i:not(:hover) {
-  -webkit-transition: font-size .5s ease-out;
-  transition: font-size .5s ease-out;
+  -webkit-transition: font-size .5s ease-out, color .2s ease-in;
+  transition: font-size .5s ease-out, color .2s ease-in;
 }
 
 .projects-grid-container .grid-item .project-icon-box {
@@ -973,6 +989,244 @@ body {
 }
 
 .projects-grid-container .grid-item .project-icon-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 4em;
+  width: 4em;
+}
+
+.projects-grid-container .card-flip {
+  background-color: transparent;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.projects-grid-container .card-flip-inner {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.projects-grid-container .card-flip:hover .card-flip-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.projects-grid-container .card-flip-front,
+.projects-grid-container .card-flip-back {
+  position: absolute;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.projects-grid-container .card-flip-back {
+  position: relative;
+  top: 0px;
+  height: 50vh;
+}
+
+.projects-grid-container .card-flip-front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: col;
+          flex-direction: col;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects-grid-container .card-flip-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: col;
+          flex-direction: col;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.projects-grid-container::before {
+  content: "";
+  width: 0;
+  padding-bottom: 100%;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+.projects-grid-container > *:first-child {
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+.projects-grid-container > * {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px #5E1715ff;
+}
+
+/* CSS HEX */
+body {
+  background-color: #927D78ff;
+}
+
+.projects-full {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 100%;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: col;
+          flex-direction: col;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: fit-content;
+}
+
+.projects-viewport {
+  background-color: #927D78ff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem;
+  z-index: 14;
+}
+
+.project-display-container {
+  width: 100%;
+}
+
+.project-display-container h3 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.projects-grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 2rem;
+}
+
+.projects-grid-container .grid-item-mobile {
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.projects-grid-container .grid-item-mobile img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+.projects-grid-container .grid-item-mobile h5 {
+  margin-bottom: 0.25rem;
+}
+
+.projects-grid-container .grid-item-mobile i {
+  padding: 0.5rem;
+}
+
+.projects-grid-container .grid-item-mobile i:hover {
+  font-size: 3em;
+  -webkit-transition: font-size .2s ease-in, color .2s ease-in;
+  transition: font-size .2s ease-in, color .2s ease-in;
+  color: #7d80daff;
+}
+
+.projects-grid-container .grid-item-mobile i:not(:hover) {
+  -webkit-transition: font-size .5s ease-out, color .2s ease-in;
+  transition: font-size .5s ease-out, color .2s ease-in;
+}
+
+.projects-grid-container .grid-item-mobile .project-icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects-grid-container .grid-item-mobile .project-icon-box div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

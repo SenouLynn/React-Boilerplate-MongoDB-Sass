@@ -8,3 +8,13 @@
     height: 100%;
     width: 100%;
 }
+
+@mixin pic-center-top{
+    object-fit: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+
+}

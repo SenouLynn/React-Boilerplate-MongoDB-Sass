@@ -1,11 +1,29 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
+
 
 
 import OutMaineGif from '../img/OutMaine-gif.gif'
 import tilGif from '../img/TIL-gif.gif'
 import chatApp from '../img/WebSocketChatApp-gif.gif'
+import yelpington from '../img/Yelpington-gif.gif'
+
+import binarySearch from '../img/BinarySearchVisualizer-gif.gif'
 
 export default function Projects(props) {
+
+    function flipCard() {
+
+    }
+
+    //Conditionally Render Components Based on Screen Size//
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 800px)'
+    })
+
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 800px)' })
+
     const projectShowcase = [
         {
             "name": "OutMaine! Resource Library",
@@ -25,40 +43,26 @@ export default function Projects(props) {
         {
             "name": "WebSocket Chat",
             "gif": chatApp,
-            "description": "A simple local chat application I built to learn how Websockets work for another project. It currently lives locally but could adapt for peer-to-peer communication with persisting messages through DB connection",
+            "description": "A simple local chat application I built to learn how Websockets work for another project. The current user interface utilizes Material UI components. It currently lives locally but could adapt for peer-to-peer communication with persisting messages through DB connection",
             "link": chatApp,
             "github": "https://github.com/SenouLynn/websocket-chat"
         },
         {
             "name": "Yelpington",
-            "gif": "",
-            "description": "",
-            "link": "",
-            "github": ""
+            "gif": yelpington,
+            "description": "A single-page React-app with an express back-end managing API calls to MongoDB create a persistent review application along with an integrated Leaflet's map viewport",
+            "link": "https://ya-yelpington.herokuapp.com/",
+            "github": "https://github.com/SenouLynn/yelpington-SenouLynn"
         },
         {
             "name": "Binary Search Visualizer",
-            "gif": "",
-            "description": "",
+            "gif": binarySearch,
+            "description": "Desktop website built to visualize how a logarithmic or binary search works to efficiently narrow results from an ordered list.",
             "link": "https://binary-search-visualizer.herokuapp.com/",
-            "github": ""
-        },
-        {
-            "name": "Tic Tac Toe",
-            "gif": "",
-            "description": "",
-            "link": "",
-            "github": ""
+            "github": "https://github.com/SenouLynn/binary-search-visualizer"
         },
 
     ]
-    // {
-    //     "name": "",
-    //     "gif": "",
-    //     "description": "",
-    //     "link": "",
-    //     "github": ""
-    // },
 
     let projectGridBuilder = projectShowcase.map((project) => {
 
@@ -71,6 +75,7 @@ export default function Projects(props) {
 
                     <div className="card-flip-front">
                         <img src={project.gif} alt={project.name + " Showcase"}></img>
+             
 
                     </div>
 
@@ -86,9 +91,18 @@ export default function Projects(props) {
                         <a href={project.link} target="_blank" rel="noreferrer" ><i className="fas fa-link fa-2x"></i></a>
                     </div>
                     <div>
+                        {isTabletOrMobile && <>
+
+                            <button onClick={flipCard()}>About</button>
+                        </>
+                        }
+                    </div>
+                    <div>
                         <a href={project.github} target="_blank" rel="noreferrer" ><i className="fab fa-github fa-2x"></i></a>
                     </div>
                 </div>
+
+                <hr></hr>
             </div>
 
         )
@@ -96,14 +110,15 @@ export default function Projects(props) {
     })
 
 
+
     return (
         <div id="Projects" className="projects-full">
             <div className="projects-viewport">
                 <div className="project-display-container">
                     <h3>Past <span className="title-highlight">Projects</span></h3>
-
+                    <hr></hr>
                     <div className="projects-grid-container">
-                      
+
                         {projectGridBuilder}
 
                     </div>

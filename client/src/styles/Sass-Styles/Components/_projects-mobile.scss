@@ -1,0 +1,155 @@
+@import "../Pages/page";
+@import "../Images/img-placement";
+@import "../Base/padding";
+
+
+
+
+.projects-full {
+  @include full-page(fit-content);
+  max-height: fit-content;
+}
+
+.projects-viewport {
+  background-color: $main-bg-color;
+  height: fit-content;
+  width: 100%;
+
+  @include viewport;
+  
+  z-index: 14;
+}
+
+.project-display-container {
+  width: 100%;
+
+  h3 {
+    text-align: center;
+    padding: $padding-6;
+  }
+  
+}
+
+.projects-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: $padding-6;
+
+
+  .grid-item-mobile {
+    // background-color: black;
+
+    
+    text-align: center;
+
+    height: fit-content;
+
+
+    img {
+      @include pic-center-top;
+      max-width: 100%;
+
+      padding: $padding-2;
+    }
+
+    h5 {
+      margin-bottom: $margin-1;
+    }
+    
+    i {
+ 
+      padding: $padding-2;
+    }
+
+    i:hover{
+      font-size: 3em;
+      transition: font-size .2s ease-in, color .2s ease-in;
+      color: $violet-blue-crayola;
+    }
+
+    i:not(:hover){
+      transition: font-size .5s ease-out, color .2s ease-in;
+    }
+
+    
+    .project-icon-box{
+      @include flex-row(center-all);
+
+      div {
+        @include flex-row(center-all);
+
+        height: 4em;
+        width: 4em;
+
+      }
+
+    }
+
+  }
+
+  .card-flip{
+    background-color: transparent;
+    perspective: 1000px;
+  }
+
+  .card-flip-inner {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card-flip:hover .card-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  
+.card-flip-front,
+.card-flip-back {
+  position: absolute;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card-flip-back{
+  position:relative;
+  top: 0px;
+  height: 50vh;
+
+}
+
+.card-flip-front {
+  @include flex-col(center-all);
+}
+
+.card-flip-back {
+  @include flex-col(center-all);
+  transform: rotateY(180deg);
+  }
+  
+}
+
+.projects-grid-container::before {
+  content: "";
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.projects-grid-container > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+
+.projects-grid-container > * {
+    background: rgba(0,0,0,0.1);
+    border: 1px $highlight-color;
+  }

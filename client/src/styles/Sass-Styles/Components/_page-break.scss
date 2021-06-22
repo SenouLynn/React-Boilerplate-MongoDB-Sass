@@ -7,7 +7,7 @@
 
 .page-break {
   // max-width: 100vw;
-  @include full-page(32vh);
+  @include full-page(20vh);
 
   background-color: $silver-pink;
 
@@ -27,5 +27,15 @@
     .fab, .fas{
         color: $highlight-2-color;
   }
+
+  .fab:hover, .fas:hover {
+    color: $violet-blue-crayola;
+    transition: color .5s ease-in;
+  }
+
+  .fab:not(:hover), .fas:not(:hover){
+    transition: color 1s ease-out;
+  }
+  
 }
 }
