@@ -16,6 +16,7 @@ import AboutMobile from './components/AboutMobile'
 import Projects from './components/Projects'
 import ProjectsMobile from './components/ProjectsMobile'
 import Skills from './components/Skills'
+import Contact from './components/Contact'
 
 
 
@@ -29,9 +30,6 @@ function App() {
 
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 800px)' })
 
-
-
-console.log(isDesktopOrLaptop)
   return (
     <div className="App">
 
@@ -44,6 +42,8 @@ console.log(isDesktopOrLaptop)
       <Skills />
       <PageBreak />
       <Projects />
+      <PageBreak />
+      <Contact />
       </>
       }
       {isTabletOrMobile && <> 

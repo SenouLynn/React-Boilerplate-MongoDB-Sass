@@ -17,11 +17,6 @@ export default function Projects(props) {
     }
 
     //Conditionally Render Components Based on Screen Size//
-
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-device-width: 800px)'
-    })
-
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 800px)' })
 
     const projectShowcase = [

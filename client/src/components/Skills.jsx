@@ -58,7 +58,7 @@ export default function Skills() {
         skillsObject.map((obj) => {
                                
             return (
-            <SkillSub name={obj.name} logo={obj.logo} description={obj.description} />
+            <SkillSub key={obj.name} name={obj.name} logo={obj.logo} description={obj.description} />
             )
         })
     )
