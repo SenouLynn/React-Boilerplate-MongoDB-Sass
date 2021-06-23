@@ -223,6 +223,13 @@ body {
 
 .nav-full .nav-viewport .nav-link-container .nav-link:hover {
   background-color: #b0a3d4ff;
+  -webkit-transition: background-color .5s ease-in;
+  transition: background-color .5s ease-in;
+}
+
+.nav-full .nav-viewport .nav-link-container .nav-link:not(:hover) {
+  -webkit-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
 }
 
 /* CSS HEX */
@@ -535,7 +542,9 @@ body {
 }
 
 .about-full {
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -600,7 +609,8 @@ body {
 }
 
 .about-viewport .about-box-1 h3 {
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .about-viewport .about-box-1 .about-info-container {
@@ -690,7 +700,9 @@ body {
 }
 
 .about-mobile-full {
-  height: 95vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -1345,6 +1357,135 @@ body {
 .projects-grid-container > * {
   background: rgba(0, 0, 0, 0.1);
   border: 1px #5E1715ff;
+}
+
+/* CSS HEX */
+body {
+  background-color: #927D78ff;
+}
+
+.skills-full {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 100%;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: col;
+          flex-direction: col;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: fit-content;
+}
+
+.skills-viewport {
+  background-color: #927D78ff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem;
+  position: relative;
+  z-index: 14;
+  text-align: center;
+}
+
+.skills-viewport hr {
+  margin: 2rem;
+}
+
+.skills-viewport h3 {
+  padding: 2rem;
+}
+
+.skills-display-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 800px) {
+  .skills-display-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.skills-sub-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 800px) {
+  .skills-sub-container {
+    margin: .5rem;
+  }
+  .skills-sub-container h4 {
+    font-size: 1rem;
+  }
+}
+
+.skills-logo-container {
+  max-height: 10vw;
+  max-width: 10vw;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.skills-logo-container .skills-logo {
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 /* CSS HEX */

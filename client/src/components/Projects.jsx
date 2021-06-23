@@ -70,7 +70,7 @@ export default function Projects(props) {
 
         return (
             <div key={project.name + projectShowcase.indexOf(project)} className="grid-item card-flip">
-                <h5>{stringSplit[0]} <span className="title-highlight">{stringSplit[1]} {stringSplit[3] ? stringSplit[3] : ""}</span></h5>
+                <h5>{stringSplit[0]} <span className="title-highlight">{stringSplit[1]}</span> {stringSplit[2] ? stringSplit[2] : ""}</h5>
                 <div className="card-flip-inner">
 
                     <div className="card-flip-front">

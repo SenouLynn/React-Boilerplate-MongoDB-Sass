@@ -14,7 +14,7 @@ export default function NavMobile() {
     let navLinkArray = [
         "Home",
         "About",
-        "Skills",
+        "Tools",
         "Projects",
         "Resume",
 

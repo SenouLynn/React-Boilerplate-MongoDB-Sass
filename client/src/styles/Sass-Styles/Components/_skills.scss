@@ -1,0 +1,74 @@
+@import "../Pages/page";
+@import "../Images/img-placement";
+@import "../Base/padding";
+
+
+.skills-full{
+    @include full-page(fit-content);
+    max-height: fit-content;
+}
+
+.skills-viewport{
+    background-color: $main-bg-color;
+    height: fit-content;
+    width: 100%;
+  
+    @include viewport;
+    position: relative;
+    z-index: 14;
+
+    // @include flex-row(center-all);
+    text-align: center;
+    
+    hr {
+        margin: 2rem;
+    }
+
+    h3{
+        padding: $padding-6;
+    }
+}
+.skills-display-container {
+    // @include flex-row(top-center)
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @media(max-width: 800px){
+
+        flex-wrap: wrap
+
+    }
+    
+}
+
+.skills-sub-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media(max-width: 800px){
+        margin: .5rem;
+
+        h4 {
+            font-size: 1rem;
+        }
+    }
+}
+.skills-logo-container {
+    max-height: 10vw;
+    max-width: 10vw;
+
+    width: 100%;
+    height: 100%;
+    @include flex-row(center-all);
+ 
+
+    padding: $padding-2;
+
+.skills-logo{
+    @include pic-center-top;
+
+}
+}

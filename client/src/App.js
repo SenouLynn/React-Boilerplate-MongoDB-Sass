@@ -13,9 +13,9 @@ import Landing from './components/Landing'
 import PageBreak from './components/PageBreak'
 import About from './components/About'
 import AboutMobile from './components/AboutMobile'
-import PageBreak2 from './components/PageBreak2'
 import Projects from './components/Projects'
 import ProjectsMobile from './components/ProjectsMobile'
+import Skills from './components/Skills'
 
 
 
@@ -41,18 +41,20 @@ console.log(isDesktopOrLaptop)
       <PageBreak />
       <About />
       <PageBreak />
-      <Projects />
+      <Skills />
       <PageBreak />
+      <Projects />
       </>
       }
       {isTabletOrMobile && <> 
       <NavMobile />
       <Landing />
       <PageBreak />
+      <Skills />
+      <PageBreak />
       <AboutMobile />
       <PageBreak />
       <ProjectsMobile />
-      <PageBreak />
       </>}
 
     </div>

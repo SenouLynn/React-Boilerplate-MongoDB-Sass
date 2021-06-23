@@ -7,7 +7,7 @@
 
 
 .about-mobile-full{
-    @include full-page(95vh);
+    @include full-page(fit-content);
     max-height: fit-content;
     
     
