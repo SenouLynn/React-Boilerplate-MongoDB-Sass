@@ -27,7 +27,7 @@ app.listen(port, () => {
 
 //<--- Local/Build Path Switch connecting to DB ---> //
 let staticDir;
-let productionState = false;
+let productionState = true;
 
 
 if(!productionState){
@@ -35,11 +35,10 @@ if(!productionState){
 
 } else {
     staticDir = path.resolve('./client/public')
-
-//<--- Local/Build Server Switch --->//
-app.use(express.static(staticDir));
-}
-
+  }
+  
+  //<--- Local/Build Server Switch --->//
+  app.use(express.static(staticDir));
 
 //<--- NodeMailer Setup --->//
 const transporter = nodemailer.createTransport({
