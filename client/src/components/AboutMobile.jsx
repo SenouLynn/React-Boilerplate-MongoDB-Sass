@@ -17,7 +17,9 @@ export default function AboutMobile() {
                     <img className="about-mobile-pic" src={AboutPic2} alt="Senou Hanging Out"></img>
                 </div>
                     <div>
-                        <p>While some of my  freetime is spent building personal projects to make my life a bit easier and more streamlined,  I also enjoy rock climbing, hiking, mountain biking, backcountry-skiing, cooking, playing guitar, and travelling. The underlying philosophy is better myself through creative, strenuous, team building activities while sharing knowledge and building community.</p>
+                        <p>Much of my life has been spent trying new things, travelling to new places, and finding new ways to be better person and grow in better ways. I was lucky enough to have parents who instilled an open and growth mindset which I attribute much of my personal growth to. I enjoy rock climbing, hiking, mountain biking, backcountry-skiing, cooking, playing guitar, and travelling - all feeding into my philosophy of bettering myself through creative, strenuous, team building activities to build community by sharing and caring deeply for those around me. </p>
+                        <hr></hr>
+                        <p>For the past 5 years I've worked in fine-dining service, creating luxurious experiences for guests through acute wine and food knowledge and meticulous service. In light of the recent pandemic I decided to pivot to Web Development. Starting with free online HTML and CSS courses through finishing the Burlington Code Academy Bootcamp, I've been able to accumulate quite a bit of knowledge and experience in a short amount of time. As a freshly minted developer, I'm excited to see where this career path will lead and looking forward to building fantastic products for clients! </p>
 
                         <div className="about-mobile-info-container">
                             <div className="about-mobile-info-sub-container">
@@ -30,18 +32,6 @@ export default function AboutMobile() {
                                     <p>Senou Lynn</p>
                                     <p>802-829-0160</p>
                                     <p>Senou.Lynn@Gmail.com</p>
-                                </div>
-                            </div>
-                            <div className="about-mobile-info-sub-container">
-                                <div>
-                                    <p>Age:</p>
-                                    <p>Location:</p>
-                                    <p>Looking for Work:</p>
-                                </div>
-                                <div>
-                                    <p>26</p>
-                                    <p>Burlington, VT (Open for Remote)</p>
-                                    <p>Yes!</p>
                                 </div>
                             </div>
                             <div>

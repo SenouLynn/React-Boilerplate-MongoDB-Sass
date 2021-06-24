@@ -10,9 +10,12 @@ export default function About() {
             <div className="about-viewport">
 
                 <div className="about-box-1">
-                    <h3>It's pronounced <span className="title-highlight">Say-New</span></h3>
+                    <h3>Born in <span className="title-highlight">Africa</span>, based out of <span className="title-highlight">Vermont</span></h3>
                     <div>
-                        <p>While some of my  freetime is spent building personal projects to make my life a bit easier and more streamlined,  I also enjoy rock climbing, hiking, mountain biking, backcountry-skiing, cooking, playing guitar, and travelling. The underlying philosophy is better myself through creative, strenuous, team building activities while sharing knowledge and building community.</p>
+                        <p>Much of my life has been spent trying new things, travelling to new places, and finding new ways to be better person and grow in better ways. I was lucky enough to have parents who instilled an open and growth mindset which I attribute much of my personal growth to. I enjoy rock climbing, hiking, mountain biking, backcountry-skiing, cooking, playing guitar, and travelling - all feeding into my philosophy of bettering myself through creative, strenuous, team building activities to build community by sharing and caring deeply for those around me. </p>
+                        <hr></hr>
+                        <p>For the past 5 years I've worked in fine-dining service, creating luxurious experiences for guests through acute wine and food knowledge and meticulous service. In light of the recent pandemic I decided to pivot to Web Development. Starting with free online HTML and CSS courses through finishing the Burlington Code Academy Bootcamp, I've been able to accumulate quite a bit of knowledge and experience in a short amount of time. As a freshly minted developer, I'm excited to see where this career path will lead and looking forward to building fantastic products for clients! </p>
+
 
                         <div></div>
                         <div className="about-info-container">
@@ -28,28 +31,16 @@ export default function About() {
                                     <p>Senou.Lynn@Gmail.com</p>
                                 </div>
                             </div>
-                            <div className="about-info-sub-container">
-                                <div>
-                                    <p>Age:</p>
-                                    <p>Location:</p>
-                                    <p>Looking for Work:</p>
-                                </div>
-                                <div>
-                                    <p>26</p>
-                                    <p>Burlington, VT (Open for Remote)</p>
-                                    <p>Yes!</p>
-                                </div>
-
+                            <div>
+                                <a href={Resume} download="Senou Lynn - Resume" target='_blank' rel="noreferrer" >
+                                    <button className="button-1">Download my Resume!</button>
+                                </a>
                             </div>
-                                <div>
-                                    <a href={Resume} download="Senou Lynn - Resume" target='_blank' rel="noreferrer" >
-                                        <button className="button-1">Download my Resume!</button>
-                                    </a>
-                                </div>
+
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="about-box-2">
 
                     <img className="about-pic" src={AboutPic2} alt="Senou Hanging Out"></img>

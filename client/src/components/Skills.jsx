@@ -10,6 +10,7 @@ import ExpressLogo from '../img/Expressjs-2.png'
 import NodejsLogo from '../img/NodejsLogo-2.png'
 import HerokuLogo from '../img/heroku-logo-stroke-gradient.png'
 import AlgoliaLogo from '../img/Algolia-logo-sm.png'
+import SassLogo from '../img/Sass.png'
 
 
 
@@ -42,6 +43,11 @@ export default function Skills() {
             "description": ""
         },
         {
+            "name": "Sass",
+            "logo": SassLogo,
+            "description": ""
+        },
+        {
             "name": "Heroku",
             "logo": HerokuLogo,
             "description": ""
@@ -51,6 +57,7 @@ export default function Skills() {
             "logo": AlgoliaLogo,
             "description": ""
         },
+
     
     ]
 
