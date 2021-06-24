@@ -27,7 +27,7 @@ app.listen(port, () => {
 
 //<--- Local/Build Path Switch connecting to DB ---> //
 let staticDir;
-let productionState = true;
+let productionState = false;
 
 
 if(!productionState){
@@ -86,17 +86,12 @@ app.post('/send-email', (req, res, next) => {
 
   transporter.sendMail(mail, (err, data) => {
     if(err) {
-      // res.send({
-      //   status: 'fail'
-      // })
 
       sendSuccess = false
 
     } else {
       console.log("== Message Sent ==")
-      // res.send({
-      //   status: 'success'
-      // })
+
 
       sendSuccess = true
     }  
