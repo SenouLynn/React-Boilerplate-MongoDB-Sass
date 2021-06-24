@@ -27,7 +27,7 @@ app.listen(port, () => {
 
 //<--- Local/Build Path Switch connecting to DB ---> //
 let staticDir;
-let productionState = true;
+let productionState = false;
 
 
 if(!productionState){
