@@ -1,36 +1,37 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
+import ContactForm from './Contact-Form';
+
 export default function Contact() {
 
-    let [fullName, setFullName] = useState("");
-    let [email, setEmail] = useState("");
-    let [subject, setSubject] = useState("")
-    let [content, setContent] = useState("")
+    useEffect(() => {
+
+        if (emailSuccess) {
+            fetch("/email")
+                .then((res) => res.json())
+                .then((res) => {
+                    if (res === true) {
+                        alert("Message Sent! I'll get back to you as soon as possible!");
+                    } else if (res === false) {
+                        alert("Message failed to send");
+                    }
+                })
+        }
+    })
+
+    let [emailSuccess, setEmailSuccess] = useState(false)
+  
+    let handleCallback = (childdata) => {
+        setEmailSuccess(childdata)
+    }
 
     return (
-        <div className="contact-full">
+        <div id="Contact"className="contact-full">
             <div className="contact-viewport">
-                <form action="/send-email" method="POST" id="send-email">
-                    <div className="form-container">
-                        <div>
-                            <input type="text" value={fullName} id="full-name" name="full-name" placeholder="What's you're Name?" onChange={(e) => setFullName(e.target.value)}></input>
 
-                            <input type="email" value={email} id="your-email" name="your-email" placeholder="What's you're email?" onChange={(e) => setEmail(e.target.value)}></input>
-                        </div>
-
-                        <div>
-                            <input type="text" value={subject} id="email-subject" name="email-subject" placeholder="To what do I owe the pleasure? (Subject)" onChange={(e) => setSubject(e.target.value)}></input>
-                        </div>
-                        <div>
-                            <textarea type="text" value={content} id="email-content" name="email-content" onChange={(e) => setContent(e.target.value)}></textarea>
-                        </div>
-
-                    </div>
-                        <input type="submit"></input>
-
-                </form>
-
-
+            <h3>Let's <span className="title-highlight">touch</span> base!</h3>
+            <hr></hr>
+            <ContactForm success = {handleCallback}/>
             </div>
         </div>
     )

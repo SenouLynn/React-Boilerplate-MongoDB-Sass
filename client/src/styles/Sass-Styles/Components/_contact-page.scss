@@ -1,4 +1,11 @@
 
+@import "../Base/sizing";
+@import "../Base/padding";
+@import "../Base/flex";
+@import "../Base/colors";
+
+@import "../Base/media-querries";
+
 .contact-full {
     @include full-page(fit-content);
     max-height: fit-content;
@@ -12,5 +19,56 @@
     @include viewport;
     position: relative;
     z-index: 14;
+
+
+    .form-subcontainer{
+        width: 100%;
+        
+        .input-type-1 {
+            margin-right: 2%;
+        
+        }
+        input {
+            width: 49%;
+            padding: $padding-2;
+            margin-bottom: $margin-2;
+            color: $highlight-color;
+
+            border-radius: 5px;
+        }
+
+        textarea{
+            width: 100%;
+            height: 20vh;
+            padding: $padding-2;
+            margin-bottom: $margin-2;
+            color: $highlight-color;
+            border-radius: 5px;
+        }
+
+   
+          
+    }
+    input[type=submit], #submit-button,  .submit  {
+          
+        padding: $padding-2;
+        margin-bottom: $margin-2;
+        border-radius: 5px;
+
+    
+
+   
+    }
+    
+
+    #submit-button:hover {
+        color: $violet-blue-crayola;
+        transition: color .5s ease-in;
+        
+      }
+    
+      #submit-button:not(:hover){
+        transition: color 1s ease-out;
+      }
   }
   

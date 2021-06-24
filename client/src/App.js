@@ -55,6 +55,9 @@ function App() {
       <AboutMobile />
       <PageBreak />
       <ProjectsMobile />
+      <PageBreak />
+      <Contact />
+
       </>}
 
     </div>

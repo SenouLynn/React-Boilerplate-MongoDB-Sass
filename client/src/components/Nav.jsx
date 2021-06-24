@@ -6,7 +6,7 @@ export default function Nav() {
         "About",
         "Tools",
         "Projects",
-        "Resume",
+        "Contact",
 
     ]
 

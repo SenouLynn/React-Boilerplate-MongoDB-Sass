@@ -78,3 +78,8 @@ u {
   text-decoration: none;
   border-bottom: 2px solid rgba(227, 222, 229, 0.65);;
 }
+
+input, input:focus, textarea, textarea:focus select, select:focus{
+  outline: none;
+  border: none;
+}

@@ -76,6 +76,11 @@ u {
   border-bottom: 2px solid rgba(227, 222, 229, 0.65);
 }
 
+input, input:focus, textarea, textarea:focus select, select:focus {
+  outline: none;
+  border: none;
+}
+
 /* CSS HEX */
 /* CSS HEX */
 * {
@@ -1488,6 +1493,7 @@ body {
   width: 100%;
 }
 
+/* CSS HEX */
 .contact-full {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1525,6 +1531,48 @@ body {
   padding: 2rem;
   position: relative;
   z-index: 14;
+}
+
+.contact-viewport .form-subcontainer {
+  width: 100%;
+}
+
+.contact-viewport .form-subcontainer .input-type-1 {
+  margin-right: 2%;
+}
+
+.contact-viewport .form-subcontainer input {
+  width: 49%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #5E1715ff;
+  border-radius: 5px;
+}
+
+.contact-viewport .form-subcontainer textarea {
+  width: 100%;
+  height: 20vh;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #5E1715ff;
+  border-radius: 5px;
+}
+
+.contact-viewport input[type=submit], .contact-viewport #submit-button, .contact-viewport .submit {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.contact-viewport #submit-button:hover {
+  color: #7d80daff;
+  -webkit-transition: color .5s ease-in;
+  transition: color .5s ease-in;
+}
+
+.contact-viewport #submit-button:not(:hover) {
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
 }
 
 /* CSS HEX */

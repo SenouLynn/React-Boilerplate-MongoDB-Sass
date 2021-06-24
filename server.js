@@ -67,6 +67,7 @@ transporter.verify(function(error, success) {
 })
 
 //<--- Incoming form information from contact form --->//
+let sendSuccess;
 
 app.post('/send-email', (req, res, next) => {
 
@@ -80,21 +81,32 @@ app.post('/send-email', (req, res, next) => {
     from: email,
     to: process.env.EMAIL,
     subject: subject,
-    text:"From " + name + "%0D%0A" + content
+    text:"From " + name + `/n` + content
   }
 
   transporter.sendMail(mail, (err, data) => {
     if(err) {
-      res.json({
-        status: 'fail'
-      })
+      // res.send({
+      //   status: 'fail'
+      // })
+
+      sendSuccess = false
+
     } else {
       console.log("== Message Sent ==")
-      res.json({
-        status: 'success'
-      })
-    }
+      // res.send({
+      //   status: 'success'
+      // })
+
+      sendSuccess = true
+    }  
   })
+})
+
+app.get("/email", (req, res) => {
+
+  res.send(sendSuccess)
+
 })
 
 
