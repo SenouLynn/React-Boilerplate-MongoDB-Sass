@@ -80,7 +80,7 @@ app.post('/send-email', (req, res, next) => {
     from: email,
     to: process.env.EMAIL,
     subject: subject,
-    text:"From " + name + `/n` + content
+    text:"From " + name + `\n` + content
   }
 
   transporter.sendMail(mail, (err, data) => {
