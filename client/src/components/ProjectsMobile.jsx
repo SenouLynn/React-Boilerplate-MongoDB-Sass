@@ -111,7 +111,7 @@ export default function Projects(props) {
             <div className="projects-viewport">
                 <div className="project-display-container">
                     <h3>Past <span className="title-highlight">Projects</span></h3>
-                    <hr style={{marginBottom = "1rem"}}></hr>
+                    <hr style={{marginBottom : "1rem"}}></hr>
                     <div className="projects-grid-container">
                         {projectGridBuilder}
                     </div>
