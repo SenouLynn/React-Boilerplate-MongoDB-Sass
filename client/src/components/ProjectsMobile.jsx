@@ -97,7 +97,7 @@ export default function Projects(props) {
                     </div>
                 </div>
 
-                <hr></hr>
+                <hr style={{paddingBottom : "1rem"}}></hr>
             </div>
 
         )

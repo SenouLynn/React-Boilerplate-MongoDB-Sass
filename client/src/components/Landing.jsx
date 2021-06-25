@@ -15,6 +15,7 @@ export default function landing() {
                 <div className="landing-title-container">
                     <h3>Senou</h3>
                     <h3>Senou</h3>
+                    <h3>Senou</h3>
                     <h3 className="title-highlight-2">Senou Lynn</h3>
                     <h3 className="title-highlight-2">Jr. Developer</h3>
                     <h3>Senou</h3>

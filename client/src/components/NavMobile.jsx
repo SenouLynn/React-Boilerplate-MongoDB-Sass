@@ -16,7 +16,7 @@ export default function NavMobile() {
         "About",
         "Tools",
         "Projects",
-        "Resume",
+        "Contact",
 
     ]
 
