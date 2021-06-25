@@ -43,7 +43,7 @@ export default function ContactForm(props) {
                     </div>
 
                     <div className="form-subcontainer">
-                        <input type="text" value={subject} id="email-subject" name="email-subject" placeholder="To what do I owe the pleasure? (Subject)" onChange={(e) => setSubject(e.target.value)}></input>
+                        <input  className="contact-subject" type="text" value={subject} id="email-subject" name="email-subject" placeholder="To what do I owe the pleasure? (Subject)" onChange={(e) => setSubject(e.target.value)}></input>
                     </div>
                     <div className="form-subcontainer">
                         <textarea type="text" value={content} id="email-content" name="email-content" placeholder="What's on your mind?" onChange={(e) => setContent(e.target.value)}></textarea>
