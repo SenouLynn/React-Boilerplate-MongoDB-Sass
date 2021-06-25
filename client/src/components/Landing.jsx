@@ -28,6 +28,11 @@ export default function landing() {
                     <h3>Senou</h3>
                     <h3>Senou</h3>
                     <h3>Senou</h3>
+                    <h3>Senou</h3>
+                    <h3>Senou</h3>
+                    <h3>Senou</h3>
+                    <h3>Senou</h3>
+                    <h3>Senou</h3>
 
                 </div>
 
